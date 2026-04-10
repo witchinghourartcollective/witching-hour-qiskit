@@ -12,7 +12,7 @@ A minimal qBraid + Qiskit environment for submitting and testing quantum circuit
 
 ## Repository URL
 
-Replace with your public GitHub repository URL.
+https://github.com/witchinghourartcollective/witching-hour-qiskit
 
 ## What users can do with it
 
