@@ -1,12 +1,43 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "witching-hour-qiskit"
 version = "0.1.0"
-description = "Minimal qBraid and Qiskit repository for ecosystem submission."
+description = "Minimal qBraid and Qiskit starter package for runtime experiments."
 readme = "README.md"
 requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Fletcher Vaughn" },
+]
 dependencies = [
     "qbraid[qiskit]>=0.11,<0.12",
 ]
+keywords = ["qbraid", "qiskit", "quantum", "openqasm"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.urls]
+Homepage = "https://github.com/witchinghourartcollective/witching-hour-qiskit"
+Documentation = "https://github.com/witchinghourartcollective/witching-hour-qiskit#readme"
+Repository = "https://github.com/witchinghourartcollective/witching-hour-qiskit"
+
+[project.scripts]
+witching-hour-qiskit = "witching_hour_qiskit.cli:main"
 
 [tool.setuptools]
-py-modules = []
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
